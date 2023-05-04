@@ -20,6 +20,7 @@ discovery-prep:
 load-sample-data:
 	echo "\n\nThis command will use Poetry as the Python venv\n\n"
 	mkdir -p output/txts/
+	poetry install
 	poetry run tap-mailerlite --config .secrets/config.json --catalog catalogs/subscribers_catalog.json > output/txts/subscribers_output.txt
 	poetry run tap-mailerlite --config .secrets/config.json --catalog catalogs/groups_catalog.json > output/txts/groups_output.txt
 	poetry run tap-mailerlite --config .secrets/config.json --catalog catalogs/campaigns_catalog.json > output/txts/campaigns_output.txt

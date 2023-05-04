@@ -129,3 +129,13 @@ meltano elt tap-mailerlite target-jsonl
 
 See the [dev guide](https://sdk.meltano.com/en/latest/dev_guide.html) for more instructions on how to use the SDK to
 develop your own taps and targets.
+
+
+### Setting up the environment for discovery and testing the content
+
+```
+make discovery-prep
+make targetcsvenv-prep
+make load-sample-data
+make process-sample-data
+```
